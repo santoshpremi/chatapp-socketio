@@ -33,6 +33,9 @@ function App() {
           onChange={(event) => {
             setRoom(event.target.value);
           }}
+          onKeyPress={(event)=>{
+            event.key === "Enter" && joinRoom();       
+          }}
         />
         <button onClick={joinRoom}> Join A Room</button>
       </div>
